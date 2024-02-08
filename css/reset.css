@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #DDE8FF;
 }
 
 ul {
@@ -16,8 +17,4 @@ a {
 img {
     max-width: 100%;
     height: auto;
-}
-
-body {
-    background-color: #DDE8FF;
 }
