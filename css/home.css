@@ -2,9 +2,130 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 88vh;
+}
+
+/* 미션선택 모달창 */
+.modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    z-index: 1;
+}
+
+.modalContainer {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    /*ffffff 투명도*/
+    padding: 20px;
+    border-radius: 20px;
+    width: 480px;
+    height: 500px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    /* inner shadow */
+    backdrop-filter: blur(5px);
+    /* 배경만 흐리게 처리 */
+    position: relative;
+
+    /* 가운데 위치조정 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.modalContainer h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+.challengeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+
+#challenge-types {
+    /* chanllge buttton 누르고 flex로 변경 */
+    display: none;
+}
+
+.modalContainer button {
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.challenge button {
+    background-color: #7997FF;
+}
+
+.challenge-type button {
+    background-color: #C9D5FF;
+}
+
+.challenge,
+.challenge-type {
+    display: flex;
+    gap: 10px;
+}
+
+.startContainer {
+    display: none;
+    /* chanllge-types buttton 누르고 flex로 변경 */
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.startbtn {
+    width: 130px !important;
+    height: 40px !important;
+    border-radius: 5px !important;
+    background-color: #5379FE;
+}
+
+.modalContainer p {
+    font-size: 15px;
+    color: #777777;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    width: 100%;
+}
+
+/* 휴지통 */
+.trashcanContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .trashcan {
-    height: 300px;
+    position: relative;
+    height: 330px;
+}
+
+.tissue {
+    position: absolute;
+    height: 95px;
+    top: -60px;
 }
