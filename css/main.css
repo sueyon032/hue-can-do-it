@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.poster {
+    width: 550px;
+    height: 400px;
+    margin: 150px auto 100px auto;
+    padding: 50px;
+    border-radius: 45px;
+    /* background 속성 */
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url('../images/home_garbage.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 35px;
+    font-family: Inter;
+    font-weight: bold;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 200px;
+}
+.btn-container > button {
+    width: 400px;
+    height: 100px;
+    border: none;
+    border-radius: 20px;
+    font-size: 40px;
+    font-family: Inter;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px gray;
+}
+.btn-container > .back {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.btn-container > .start {
+    background-color: rgba(87, 114, 255, 0.5);
+}
