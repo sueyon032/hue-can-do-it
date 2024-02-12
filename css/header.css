@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+}
+.logo {
+    width: 100%;
+    position: absolute; /* 로고 정가운데 */
+    text-align: center; /* 로고 정가운데 */
+    top: 30px;
+    font-size: 40px;
+}
+.gugi-regular {
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+nav {
+    display: flex;
+    column-gap: 20px;
+    margin: 20px 20px 0 0;
+    z-index: 5; /* nav logo에 가리지 않도록 설정 */
+}
+nav > i {
+    font-size: 20px;
+}
