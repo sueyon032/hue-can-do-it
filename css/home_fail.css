@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* home.css */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+}
+
+/* 미션선택 모달창 */
+.modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    z-index: 1;
+}
+
+.modalContainer {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    /*ffffff 투명도*/
+    padding: 20px;
+    border-radius: 20px;
+    width: 480px;
+    height: 500px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    /* inner shadow */
+    backdrop-filter: blur(5px);
+    /* 배경만 흐리게 처리 */
+    position: relative;
+
+    /* 가운데 위치조정 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.modalContainer h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+.challengeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+
+#challenge-types {
+    /* chanllge buttton 누르고 flex로 변경 */
+    display: none;
+}
+
+.modalContainer button {
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.challenge button {
+    background-color: #7997FF;
+}
+
+.challenge-type button {
+    background-color: #C9D5FF;
+}
+
+.challenge,
+.challenge-type {
+    display: flex;
+    gap: 10px;
+}
+
+.startContainer {
+    display: none;
+    /* chanllge-types buttton 누르고 flex로 변경 */
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.startbtn {
+    width: 130px !important;
+    height: 40px !important;
+    border-radius: 5px !important;
+    background-color: #5379FE;
+}
+
+.modalContainer p {
+    font-size: 15px;
+    color: #777777;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    width: 100%;
+}
+
+/* 휴지통 */
+.trashcanContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trashcan {
+    position: relative;
+    height: 330px;
+}
+
+.tissueContainer {
+    position: absolute;
+    top: -60px;
+}
+
+.tissue {
+    background-color: white;
+    height: 95px;
+    width: 400px;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+
+.tissue.clicked {
+    transform: translateY(40px) scale(1.5);
+    /* 클릭 시 tissue를 밑으로 올리고 확대하는 애니메이션 효과 */
+    width: 380px;
+    height: 310px;
+}
+
+/* 오늘의미션 모달창 */
+.tissue-modal {
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.trashcanContainer h5 {
+    margin-bottom: 20px;
+}
+
+.chks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chk {
+    display: flex;
+    font-size: 13px;
+    gap: 3px;
+}
+
+.chks .chk input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.chk input[type="checkbox"]:checked + label {    /* 체크되었을 때 텍스트 연해짐 */
+    opacity: 0.2;
+}
+
+.timerContainer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #7997FF;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: default;
+
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* home.css */
+
+.missionfail-container{
+    z-index: 10;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Inter;
+    position: absolute;
+    padding: 70px;
+    background-color: rgba(255, 255, 255, 0.2); /* 배경 반투명 */
+    backdrop-filter: blur(15px);    /* background blur */
+    box-shadow: 0px 2px 4px gray; /* 그림자 */
+    border-radius: 20px;
+    display: none;
+}
+.missionfail-text {
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+#failBtn {
+    width: 250px;
+    height: 90px;
+    background-color: #5772FF;
+    border: none;
+    border-radius: 5px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 900;
+}
