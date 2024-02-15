@@ -70,5 +70,46 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('d-day-hour').textContent = hours;
         document.getElementById('d-day-min').textContent = minutes;
     }
+
+    // 모든 체크박스 요소를 가져오는 함수
+    function getAllCheckboxes() {
+        return document.querySelectorAll('input[type="checkbox"]');
+    }
+
+    // 모든 체크박스가 체크되었는지 확인하는 함수
+    function areAllCheckboxesChecked() {
+        const checkboxes = getAllCheckboxes();
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (!checkboxes[i].checked) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // 체크박스 상태 변경 시 이벤트 처리
+    function handleCheckboxChange() {
+        const isChecked = areAllCheckboxesChecked();
+        if (isChecked) {
+            // window.location.href = "home_fail.html"; 
+            // console.log("완료");
+        } else {
+            // 모든 체크박스가 선택되지 않은 경우
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+
+            if (hours === 0 && minutes === 0) {
+                // 현재 시간이 0시 0분일 때
+                window.location.href = "home_fail.html";
+            }
+        }
+    }
+
+    // 체크박스에 change 이벤트 리스너 추가
+    const checkboxes = getAllCheckboxes();
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', handleCheckboxChange);
+    });
 });
 
