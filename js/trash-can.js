@@ -1,5 +1,5 @@
 //일단 30개 되면 팝업창이 나오는 걸 확인해보기 위해 계속 내려오다가 30개가 되면 팝업창이 나오는 버전과
-//새로고침 시 한개만 내려오는 버전 2개의 코드를 작성함
+//새로고침 시 한개만 내려오는 버전 2개의 코드를 작성함 (나중에 미션 성공 시 페이지로 넘어와 쓰레기가 내려오는 버전으로 수정할 예정)
 
 //팝업창 버전
 window.onload = function() {
@@ -29,7 +29,7 @@ window.onload = function() {
     }
     
     function dropTrash() {
-        if (score < 30) {
+        if (score < 1) {
             const trashItem = document.createElement('img');
             trashItem.setAttribute('src', 'Image/tisue.png');
             trashItem.classList.add('trash-item');
