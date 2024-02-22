@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const challengeContainer = document.getElementById('challenges');
     const challengeTypeContainer = document.getElementById('challenge-types');
     const startContainer = document.getElementById('startContainer');
-
+    
     const challengeButtons = challengeContainer.querySelectorAll('.challenge button');
     const challengeTypeButtons = challengeTypeContainer.querySelectorAll('.challenge-type button');
 
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 휴지모달창 + 타이머
     const tissue = document.getElementById('tissue');
     const tissueModal = document.getElementById('tissueModal');
+    const missionFailContainer = document.querySelector('.missionfail-container');
 
     let targetTime; // 목표 시간
 
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tissueModal.style.display = 'flex';
 
             // 현재 시간으로부터 24시간 목표 시간으로 설정합니다.
-            targetTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+            targetTime = new Date().getTime() + (5 * 1000);
 
             startTimer();
         }
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setInterval(updateTimer, 1000); // 1초마다 타이머 업데이트
     }
 
+    // 타이머 업데이트 함수
     function updateTimer() {
         // 현재 시간 설정
         var currentTime = new Date().getTime();
@@ -60,16 +62,47 @@ document.addEventListener('DOMContentLoaded', function () {
         // 남은 시간 계산
         var distance = targetTime - currentTime;
 
-        // 시간, 분 계산
-        var hours = Math.floor(distance / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        // 남은 시간이 음수인 경우 00:00으로 설정하고 함수 종료
+        if (distance <= 0) {
+            document.getElementById('d-day-hour').textContent = '00';
+            document.getElementById('d-day-min').textContent = '00';
 
-        // 시간과 분이 한 자리 수일 경우 앞에 0을 붙여줌
-        hours = hours < 10 ? '0' + hours : hours;
+            // 한 번만 실행되도록 clearInterval 호출
+            clearInterval(timerInterval);
+
+            missionFailContainer.style.display = 'flex'; // 미션 실패 창 나타나기
+            return;
+        }
+
+        // 분, 초 계산
+        var minutes = Math.floor(distance / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // 분과 초가 한 자리 수일 경우 앞에 0을 붙여줌
         minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
 
-        document.getElementById('d-day-hour').textContent = hours;
-        document.getElementById('d-day-min').textContent = minutes;
+        // HTML 엘리먼트에 시간 출력
+        document.getElementById('d-day-hour').textContent = minutes;
+        document.getElementById('d-day-min').textContent = seconds;
     }
+
+    // 타이머 업데이트 함수를 1초마다 호출하도록 설정
+    var timerInterval = setInterval(updateTimer, 1000);
+
 });
 //home.js
+
+// 휴지 파쇄 함수
+function tissueCrush() {
+    tissueModal.style.display = 'none';
+    tissue.style.display = 'none';
+    missionFailContainer.style.display = 'none'; // missionFailContainer 숨기기
+
+    var tissueContainer = document.getElementsByClassName('tissue-crush-container')[0];
+
+    if (tissueContainers.length > 0) {
+        var tissueContainer = tissueContainers[0];
+        tissueContainer.classList.add('tissue-crush-animation');
+    }
+}
