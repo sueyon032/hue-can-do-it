@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.trash-can,
+.score,
+.target {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.trash-can {
+    margin: 5% 0 0 0;
+    position: relative; 
+    overflow: hidden;
+}
+
+.trash-item {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 2s ease-in-out;
+}
+
+.score {
+    font-size: 2rem;
+    margin: 2% 0 -2% 0;
+}
+
+.target {
+    font-size: 2rem;
+    margin: 2% 0 0 0;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: white; */
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+
+    width: 30%;
+    height: 312px;
+    /* opacity: 0.2; */
+}
+
+.popup p {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.popup button {
+    background-color: #5772FF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
