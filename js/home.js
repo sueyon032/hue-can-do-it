@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (hours === 0 && minutes === 0) {
                 // 현재 시간이 0시 0분일 때
-                window.location.href = "home_fail.html";
+                window.location.href = "mission_fail.html";
             }
         }
     }
