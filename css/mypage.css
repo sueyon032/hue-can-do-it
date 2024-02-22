@@ -98,13 +98,13 @@ li:last-child {
 }
 
 .cer-title {
-    font-size: 2rem;
+    font-size: 30px;
     padding: 3% 0;
 }
 
 .cer-content,
 .cer-target {
-    font-size: 1.5rem;
+    font-size: 25px;
 }
 
 .cer-target {
