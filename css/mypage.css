@@ -26,11 +26,11 @@
 }
 
 hr {
-    width: 80%;
+    width: 85%;
     height: 1px;
     border: 0;
     background: white;
-    margin-left: 10%;
+    margin-left: 7.5%;
 }
 
 /* 밑에만 스크롤 되게 설정 */
@@ -56,12 +56,12 @@ ul {
 
 /* 사이 간격 설정 */
 li {
-    margin-right: 100px;
+    margin-right:  200px;
 }
 
 /* 첫번째 요소 왼쪽 간격 고정 */
 li:first-child {
-    margin-left: 10%; 
+    margin-left: 7.5%; 
 }
 
 /* 마지막 요소 오른쪽 간격 제거 */
