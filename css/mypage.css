@@ -56,12 +56,12 @@ ul {
 
 /* 사이 간격 설정 */
 li {
-    margin-right: 4%;
+    margin-right: 3%;
 }
 
 /* 첫번째 요소 왼쪽 간격 고정 */
 li:first-child {
-    margin-left: 15%; 
+    margin-left: 10%; 
 }
 
 /* 마지막 요소 오른쪽 간격 제거 */
@@ -95,7 +95,7 @@ li:last-child {
 
 .cer-content,
 .cer-target {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .cer-target {
