@@ -35,6 +35,8 @@ hr {
 
 /* 밑에만 스크롤 되게 설정 */
 .certificates-item {
+    align-items: center;
+
     overflow-y: scroll;
     width: 100%;
     height: 530px;
