@@ -70,7 +70,7 @@ li:last-child {
 }
 
 .cer-box {
-    width: 50vh;
+    width: 47vh;
     height: 25vh;
     border-radius: 20px;
     background-color: white;
@@ -95,7 +95,7 @@ li:last-child {
 
 .cer-content,
 .cer-target {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .cer-target {
