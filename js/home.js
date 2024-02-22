@@ -59,6 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // 남은 시간 계산
         var distance = targetTime - currentTime;
 
+        if (distance <= 0) {
+            document.getElementById('d-day-hour').textContent = '00';
+            document.getElementById('d-day-min').textContent = '00';
+        }
+        
         // 시간, 분 계산
         var hours = Math.floor(distance / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
