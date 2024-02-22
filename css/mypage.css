@@ -2,26 +2,26 @@
 
 .profile {
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 20vh;
+    height: 20vh;
     border: 1px solid white;
     border-radius: 50%;
 }
 
 .info {
     margin: 0 auto;
-    padding: 30px;
+    padding: 3%;
     max-width: 1170px;
 }
 
 .bi-emoji-smile {
-    font-size: 140px;
-    padding: 15%;
+    font-size: 14vh;
+    padding: 29px;
 }
 
 .name {
     text-align: center;
-    font-size: 40px;
+    font-size: 4vh;
     margin: 1%;
 }
 
@@ -30,13 +30,11 @@ hr {
     height: 1px;
     border: 0;
     background: white;
-    margin-left: 7.5%;
+    margin-left: 7%;
 }
 
 /* 밑에만 스크롤 되게 설정 */
 .certificates-item {
-    align-items: center;
-
     overflow-y: scroll;
     width: 100%;
     height: 530px;
@@ -56,29 +54,28 @@ ul {
 
 /* 사이 간격 설정 */
 li {
-    margin-right: 100px;
+    margin-right: 5.5%;
 }
 
 /* 첫번째 요소 왼쪽 간격 고정 */
 li:first-child {
-    margin-left: 7.5%; 
+    margin-left: 7%; 
 }
 
 /* 마지막 요소 오른쪽 간격 제거 */
 li:last-child {
-    /* z-index: 100; */
     margin-right: 0;
 }
 
 .cer-box {
-    width: 400px;
-    height: 200px;
+    width: 50vh;
+    height: 25vh;
     border-radius: 20px;
     background-color: white;
 
     margin-top: 10%;
-    margin-bottom: 5%;
-    /* padding: 3%; */
+    margin-bottom: 10%;
+    padding: 3%;
 }
 
 .cer-title,
@@ -90,20 +87,20 @@ li:last-child {
 }
 
 .cer-title {
-    font-size: 30px;
+    font-size: 2rem;
     padding: 3% 0;
 }
 
 .cer-content,
 .cer-target {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 .cer-target {
     color: blue;
 }
 
-/* .cer-date {
+.cer-date {
     display: flex;
     text-align: right;
     justify-content: right;
@@ -112,4 +109,4 @@ li:last-child {
     margin-right: 2%;
 
     color: gray;
-} */
+}
