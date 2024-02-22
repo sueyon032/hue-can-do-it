@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Styling with JavaScript</title>
+    <style>
+        /* 초기 스타일 */
+        #changeStyleElement {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="changeStyleElement">This is an element with initial style.</div>
+
+    <script>
+        // JavaScript를 사용하여 스타일 변경
+        var elementToChange = document.getElementById('changeStyleElement');
+        
+        // 특정 속성 변경
+        elementToChange.style.color = 'red';
+
+        // 새로운 스타일 규칙 추가
+        var newStyleRule = document.styleSheets[0].insertRule('#changeStyleElement { font-weight: bold; }', 1);
+    </script>
+
+</body>
+</html>

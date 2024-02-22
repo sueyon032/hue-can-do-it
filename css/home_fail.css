@@ -28,8 +28,8 @@ main {
     border-radius: 20px;
     width: 480px;
     height: 500px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-    /* inner shadow */
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    /* drop-shadow */
     backdrop-filter: blur(5px);
     /* 배경만 흐리게 처리 */
     position: relative;
@@ -41,7 +41,7 @@ main {
 
 }
 
-.modalContainer h3 {
+.modalContainer h2 {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -68,16 +68,17 @@ main {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
     color: white;
     font-size: 20px;
-    width: 100px;
     height: 50px;
     cursor: pointer;
 }
 
 .challenge button {
+    width: 130px;
     background-color: #7997FF;
 }
 
 .challenge-type button {
+    width: 100px;
     background-color: #C9D5FF;
 }
 
@@ -105,6 +106,7 @@ main {
 .modalContainer p {
     font-size: 15px;
     color: #777777;
+    font-weight: bold;
 
     position: absolute;
     bottom: 0;
@@ -154,7 +156,7 @@ main {
     padding: 20px;
 }
 
-.trashcanContainer h5 {
+.trashcanContainer h4 {
     margin-bottom: 20px;
 }
 
@@ -208,9 +210,8 @@ main {
 
 .missionfail-container{
     z-index: 10;
-    width: 700px;
-    height: 400px;
-    display: flex;
+    width: 600px;
+    height: 350px;
     flex-direction: column;
     align-items: center;
     font-family: Inter;
@@ -223,17 +224,58 @@ main {
     display: none;
 }
 .missionfail-text {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 900;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 #failBtn {
-    width: 250px;
-    height: 90px;
+    width: 200px;
+    height: 70px;
     background-color: #5772FF;
     border: none;
     border-radius: 5px;
-    font-size: 40px;
+    font-size: 35px;
     color: #fff;
     font-weight: 900;
+}
+
+.tissue-crush-container {
+    z-index: 20;
+    position: absolute;
+    display: none;
+}
+
+.tissue-crush-animation {
+    display: flex;
+    animation: leftTissueAnimation 3s ease-out, rightTissueAnimation 3s ease-out;
+}
+
+@keyframes leftTissueAnimation {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-500px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+}
+
+@keyframes rightTissueAnimation {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(500px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(500px);
+    }
 }
