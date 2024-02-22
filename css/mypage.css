@@ -61,7 +61,7 @@ li {
 
 /* 첫번째 요소 왼쪽 간격 고정 */
 li:first-child {
-    margin-left: 10%; 
+    margin-left: 20%; 
 }
 
 /* 마지막 요소 오른쪽 간격 제거 */
