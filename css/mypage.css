@@ -65,7 +65,7 @@ ul {
 
 /* 사이 간격 설정 */
 li {
-    margin-right: 6%;
+    margin-right: 8%;
 }
 
 /* 첫번째 요소 왼쪽 간격 고정 */
@@ -120,4 +120,8 @@ li:last-child {
     margin-right: 2%;
 
     color: gray;
+}
+
+@media screen and (max-width : 1497px) {
+    
 }
