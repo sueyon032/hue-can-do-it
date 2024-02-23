@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const isChecked = areAllCheckboxesChecked();
         if (isChecked) {
             // 모든 체크박스가 선택된 경우
-            window.location.href = "mission_fail.html"; // misson_sucess.html로 변경
+            window.location.href = "mission_success.html";
         }
     }
 
