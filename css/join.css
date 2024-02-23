@@ -43,8 +43,12 @@ body {
 .join-text {
     font-size: 50px;
 }
-.next-text {
+#nextBtn {
+    background-color: transparent;
     font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+    border: none;
     text-align: right;
 }
 
