@@ -59,40 +59,23 @@ hr {
     display: none;
 }
 
-#cer-box-container div {
-    display: block;
+#cer-box-container {
+    max-width: 1300px;
+
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* .cer-box {
+.cer-box {
     width: 400px;
     height: 200px;
     border-radius: 20px;
     background-color: white;
-
-    float: left;
-    
-    margin: 45px 50px 0 0;
-    /* padding: 50px;
-} */
-
-/* .cer-box {
-    width: calc(33.33% - 40px); /* 한 줄에 3개씩 배치하므로 전체 너비의 33.33%로 설정하고 간격을 제외한 크기로 조정합니다. 
-    height: 200px;
-    border-radius: 20px;
-    background-color: white;
-    margin: 45px 20px 0 20px; /* 좌우 여백을 조정합니다. 
-    box-sizing: border-box; /* 박스 크기를 내부 여백과 테두리를 포함하여 계산합니다. 
-    float: left; /* 왼쪽으로 띄웁니다. 
-} */
-
-.cer-box {
-    width: calc((100% - 140px - 100px) / 3);
-    height: 200px;
-    border-radius: 20px;
-    background-color: white;
     margin: 45px 25px 0 25px;
-    float: left;
+    /* float: left; */
+    /* box-sizing: border-box; */
     box-sizing: border-box;
+    display: inline-block;
 }
 
 .cer-box:first-child {
@@ -125,58 +108,3 @@ p {
 .cer-target {
     color: blue;
 }
-
-/* 한 줄에 3개씩 가로배치되게 설정
-ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-/* 사이 간격 설정
-li {
-    margin-right: 8%;
-}
-
-/* 첫번째 요소 왼쪽 간격 고정
-li:first-child {
-    margin-left: 7%; 
-}
-
-/* 마지막 요소 오른쪽 간격 제거 
-li:last-child {
-    margin-right: 0;
-}
-
-.cer-box {
-    width: 50vh;
-    height: 25vh;
-    border-radius: 20px;
-    background-color: white;
-
-    margin-top: 10%;
-    margin-bottom: 10%;
-    padding: 3%;
-}
-
-.cer-title,
-.cer-content,
-.cer-target {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.cer-title {
-    font-size: 20px;
-    padding: 3% 0;
-}
-
-.cer-content,
-.cer-target {
-    font-size: 15px;
-}
-
-.cer-target {
-    color: blue;
-} */
