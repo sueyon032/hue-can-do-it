@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // 모달창 '도전'버튼
-    const modal = document.getElementById('modal'); /*나중에 수정*/
+    const modal = document.getElementById('modal');
 
     const startbtn = document.querySelector('.startbtn');
     startbtn.addEventListener('click', () => {
@@ -42,14 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // 현재 시간으로부터 24시간 목표 시간으로 설정합니다.
             targetTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+            // targetTime = new Date().getTime() + (1000 * 5); // 5초 실험용
 
             startTimer();
         }
     });
 
+    let timerInterval;
+
     function startTimer() {
         updateTimer();
-        setInterval(updateTimer, 1000); // 1초마다 타이머 업데이트
+        timerInterval = setInterval(updateTimer, 1000);
     }
 
     function updateTimer() {
@@ -59,9 +62,20 @@ document.addEventListener('DOMContentLoaded', function () {
         // 남은 시간 계산
         var distance = targetTime - currentTime;
 
+        // 시간이 종료되었을 때 타이머를 멈춤
+        if (distance <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById('d-day-hour').textContent = '00';
+            document.getElementById('d-day-min').textContent = '00';
+            window.location.href = "mission_fail.html"; // 타이머가 멈췄을 때 화면이동
+            return;
+        }
+
         // 시간, 분 계산
         var hours = Math.floor(distance / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        // var hours = Math.floor(distance / (1000 * 60));
+        // var minutes = Math.floor((distance % (1000 * 60)) / 1000);
 
         // 시간과 분이 한 자리 수일 경우 앞에 0을 붙여줌
         hours = hours < 10 ? '0' + hours : hours;
@@ -91,18 +105,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleCheckboxChange() {
         const isChecked = areAllCheckboxesChecked();
         if (isChecked) {
-            // window.location.href = "home_fail.html"; 
-            // console.log("완료");
-        } else {
-            // 모든 체크박스가 선택되지 않은 경우
-            const now = new Date();
-            const hours = now.getHours();
-            const minutes = now.getMinutes();
-
-            if (hours === 0 && minutes === 0) {
-                // 현재 시간이 0시 0분일 때
-                window.location.href = "home_fail.html";
-            }
+            // 모든 체크박스가 선택된 경우
+            window.location.href = "mission_fail.html"; // misson_sucess.html로 변경
         }
     }
 
