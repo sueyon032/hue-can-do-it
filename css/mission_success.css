@@ -1,42 +1,61 @@
-.tisue-case,
-.mission-tisue {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+main {
     display: flex;
-    text-align: center;
     justify-content: center;
+    align-items: center;
+    height: 88vh;
 }
 
-.tisue-case {
-    margin-top: 13%;
+.trashcan {
+    position: relative;
+    height: 330px;
 }
 
-.mission-tisue {
-    margin-top: -35%;
+.missionSuccess-container {
+    z-index: 10;
+    display: flex;
+    width: 600px;
+    height: 350px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    padding: 70px;
+    background-color: rgba(255, 255, 255, 0.2); /* 배경 반투명 */
+    backdrop-filter: blur(15px);    /* background blur */
+    box-shadow: 0px 2px 4px gray; /* 그림자 */
+    border-radius: 20px;
 }
 
-.mission-ment,
-.mission-item {
-    text-align: left;
-    margin-top: -28%;
-    margin-left: 10%;
+.missionSuccess-text {
+    font-size: 70px;
+    font-weight: 900;
+    margin-bottom: 40px;
 }
 
-.mission-ment {
-    font-weight: bold;
-    font-size: 2.5rem;
-    
-    padding-bottom: 2%;
+#SuccessBtn {
+    width: 200px;
+    height: 70px;
+    background-color: #5772FF;
+    border: none;
+    border-radius: 5px;
+    font-size: 35px;
+    color: #fff;
+    font-weight: 900;
 }
 
-.mission-item {
-    font-size: 1.5rem;
-    padding-bottom: 1%;
+.tissue-crumpled-container {
+    z-index: 20;
+    position: absolute;
+    display: none;
 }
 
-.stop-watch {
-    margin-top: 1%;
-    width: 20vh;
-    height: 20vh;
-    background-color: #7997FF;
-    /* border: none; */
-    border-radius: 50%;
+.tissue-crumpled-container {
+    display: none;
 }
+
+#tissue {
+    display: none;
+}
+
