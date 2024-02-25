@@ -31,7 +31,7 @@ window.onload = function() {
     function dropTrash() {
         if (score < 1) {
             const trashItem = document.createElement('img');
-            trashItem.setAttribute('src', 'Image/tisue.png');
+            trashItem.setAttribute('src', './images/tisue.png');
             trashItem.classList.add('trash-item');
             trashCan.appendChild(trashItem);
             
